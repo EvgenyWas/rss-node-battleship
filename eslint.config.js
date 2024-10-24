@@ -4,7 +4,21 @@ import tsEslint from 'typescript-eslint';
 import jestPlugin from 'eslint-plugin-jest';
 
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts}'] },
+  {
+    files: ['**/*.{js,mjs,cjs,ts}'],
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          vars: 'all',
+          args: 'after-used',
+          caughtErrors: 'none',
+          ignoreRestSiblings: false,
+          reportUsedIgnorePattern: false,
+        },
+      ],
+    },
+  },
   { languageOptions: { globals: { ...globals.browser, ...globals.jest } } },
   { ignores: ['node_modules', 'dist', 'front'] },
   {

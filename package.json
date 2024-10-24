@@ -2,7 +2,7 @@
   "name": "ws_task",
   "version": "1.0.0",
   "description": "Template for the WebSocket remote control task",
-  "main": "index.js",
+  "main": "src/index.ts",
   "type": "module",
   "scripts": {
     "start": "tsx src/index.ts",
@@ -13,14 +13,20 @@
     "lint:fix": "eslint --fix ",
     "test": "jest"
   },
-  "author": "Andrei Auchynnikau",
-  "keywords": [],
+  "author": "Yauheni Vasiukevich",
+  "keywords": [
+    "node",
+    "ws"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.7.8",
+    "@types/ws": "^8.5.12",
+    "dotenv": "^16.4.5",
     "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest": "^28.8.3",
     "globals": "^15.11.0",
     "jest": "^29.7.0",
