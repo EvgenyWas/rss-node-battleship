@@ -23,5 +23,5 @@
     "lib": ["ES2023"]
   },
   "exclude": ["node_modules", "front"],
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "tests/**/*.ts"]
 }

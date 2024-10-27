@@ -1,3 +1,5 @@
+import { RawData } from 'ws';
+
 import { MESSAGE_ID } from '@/config';
 import {
   PayloadMessage,
@@ -6,7 +8,6 @@ import {
 } from '@/types/message';
 import { Position, Ship } from '@/types/ships';
 import { BoardShipStorage } from '@/types/storage';
-import { RawData } from 'ws';
 
 export function parseMessage(data: RawData): PayloadMessage {
   const value = JSON.parse(data.toString());
